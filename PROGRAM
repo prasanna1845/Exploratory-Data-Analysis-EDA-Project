@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("student_performance_sample.csv")
+
+print(df.head())
+print(df.describe())
+
+plt.scatter(df["Study_Hours"], df["Exam_Score"])
+plt.title("Study Hours vs Exam Score")
+plt.xlabel("Study Hours")
+plt.ylabel("Exam Score")
+plt.show()
+
+plt.hist(df["Exam_Score"], bins=10)
+plt.title("Distribution of Exam Scores")
+plt.xlabel("Exam Score")
+plt.ylabel("Frequency")
+plt.show()
